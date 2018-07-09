@@ -14,19 +14,34 @@ public class BubbleSortActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        int[] data = {2, 15, 20, 5, 4875, 1, 572};
+        int[]  bubbleData = {2, 15, 20, 5, 4875, 1, 572};
 
-        bubbleSort(data);
+        bubbleSort(bubbleData);
 
         Log.d("BubbleSortActivity", "冒泡排序结果");
-        for (int aData : data) {
-            Log.d("BubbleSortActivity", aData + "");
-        }
+        print(bubbleData);
+
+        int[] cocktailData = {2, 15, 20, 5, 4875, 1, 572};
+        cocktailSort(cocktailData);
+        Log.d("BubbleSortActivity","鸡尾酒排序结果");
+        print(cocktailData);
+    }
+    /**
+     * 鸡尾酒排序排序
+     */
+    private void cocktailSort(int[] data) {
+
 
     }
 
+    private void print(int[] data) {
+        for (int aData : data) {
+            Log.d("BubbleSortActivity", aData + "");
+        }
+    }
+
     /**
-     * 排序
+     * 冒泡排序排序
      */
     private void bubbleSort(int[] data) {
         int length = data.length;
